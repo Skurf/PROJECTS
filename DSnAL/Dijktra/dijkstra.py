@@ -30,6 +30,18 @@ def dijkstra(graph,start):
           queue.add_task(new_distance,edge.vertex)
     return
 
+def main():
+  adjacency_list = {
+    A:[B,C,D],
+    B:[A,C,E],
+    C:[A,B,E,F],
+    D:[A,F],
+    E:[B,C,F],
+    F:[C,D,E]
+  }
+  result = dijkstra(adjacency_list,A)
+  print(result)
+
 #   Mark the removed vertex as visited
 #   Start a loop over all the neighbors of the removed vertex
 #   if the current vertex is visited, skip to the next
